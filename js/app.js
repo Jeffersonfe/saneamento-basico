@@ -3,6 +3,10 @@ let filtroAtual = "todos";
 let termoBusca = "";
 let topicoAtivo = null;
 
+// Carregamento progressivo dos cards (mostrar mais)
+const POR_LOTE = 6;
+let limiteVisivel = POR_LOTE;
+
 document.addEventListener("DOMContentLoaded", () => {
   renderizarTopicos();
   configurarFiltros();
@@ -24,24 +28,31 @@ function renderizarTopicos() {
   });
 
   if (contadorEl) {
-    contadorEl.innerText = `${topicosFiltrados.length} ${topicosFiltrados.length === 1 ? 'pílula disponível' : 'pílulas disponíveis'}`;
+    contadorEl.innerText = `${topicosFiltrados.length} ${topicosFiltrados.length === 1 ? 'card disponível' : 'cards disponíveis'}`;
   }
 
+  const areaCarregarMais = document.getElementById("area-carregar-mais");
+  const btnCarregarMais = document.getElementById("btn-carregar-mais");
+  const infoCarregamento = document.getElementById("info-carregamento");
+
   if (topicosFiltrados.length === 0) {
+    if (areaCarregarMais) areaCarregarMais.classList.add("hidden");
     container.innerHTML = `
       <div class="col-span-full py-16 text-center">
         <span class="text-5xl block mb-3">🔍</span>
         <h3 class="text-xl font-bold text-slate-700">Nenhum tópico encontrado</h3>
         <p class="text-slate-500 text-sm mt-1">Tente buscar por outras palavras ou selecione outro pilar acima.</p>
         <button onclick="limparFiltros()" class="mt-4 px-4 py-2 bg-emerald-600 text-white rounded-lg text-sm font-medium hover:bg-emerald-700 transition">
-          Ver todas as pílulas
+          Ver todos os cards
         </button>
       </div>
     `;
     return;
   }
 
-  container.innerHTML = topicosFiltrados.map(topico => {
+  const topicosVisiveis = topicosFiltrados.slice(0, limiteVisivel);
+
+  container.innerHTML = topicosVisiveis.map(topico => {
     const pilar = PILARES[topico.pilar] || PILARES.geral;
     return `
       <article onclick="abrirLeitor(${topico.id})" 
@@ -71,12 +82,27 @@ function renderizarTopicos() {
         <div class="px-5 py-3.5 bg-slate-50/70 border-t border-slate-100 flex items-center justify-between">
           <span class="text-xs text-slate-400">${topico.dataPublicacao}</span>
           <span class="inline-flex items-center text-xs font-bold text-emerald-600 group-hover:translate-x-1 transition-transform">
-            Ler pílula →
+            Ler card →
           </span>
         </div>
       </article>
     `;
   }).join("");
+
+  // Atualiza o botão "Ver mais"
+  const restantes = topicosFiltrados.length - topicosVisiveis.length;
+  if (restantes > 0) {
+    areaCarregarMais.classList.remove("hidden");
+    btnCarregarMais.innerText = `Ver mais ${restantes} ${restantes === 1 ? 'card' : 'cards'} ↓`;
+    infoCarregamento.innerText = `Exibindo ${topicosVisiveis.length} de ${topicosFiltrados.length}`;
+  } else {
+    areaCarregarMais.classList.add("hidden");
+  }
+}
+
+function carregarMaisTopicos() {
+  limiteVisivel += POR_LOTE;
+  renderizarTopicos();
 }
 
 function configurarFiltros() {
@@ -91,6 +117,7 @@ function configurarFiltros() {
       btn.classList.remove("bg-white", "text-slate-600", "hover:bg-slate-100");
 
       filtroAtual = btn.dataset.pilar;
+      limiteVisivel = POR_LOTE;
       renderizarTopicos();
     });
   });
@@ -101,6 +128,7 @@ function configurarBusca() {
   if (input) {
     input.addEventListener("input", (e) => {
       termoBusca = e.target.value;
+      limiteVisivel = POR_LOTE;
       renderizarTopicos();
     });
   }

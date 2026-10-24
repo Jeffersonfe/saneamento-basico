@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Saneamento Básico Descomplicado | Jefferson FE</title>
-  <meta name="description" content="Aprenda sobre saneamento básico do zero em pílulas rápidas e ilustradas de 2 minutos. Água potável, esgoto sanitário, resíduos e drenagem.">
+  <meta name="description" content="Aprenda sobre saneamento básico do zero em cards rápidos e ilustrados de 2 minutos. Água potável, esgoto sanitário, resíduos e drenagem.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💧</text></svg>">
   
   <!-- Tailwind CSS & Google Fonts -->
@@ -30,7 +30,7 @@
         </div>
         <div>
           <span class="font-bold text-slate-900 tracking-tight text-base group-hover:text-emerald-700 transition">Saneamento Descomplicado</span>
-          <span class="block text-[11px] font-medium text-slate-400">por jeffersonfe.com.br</span>
+          <span class="block text-[11px] font-medium text-slate-400">por Jefferson Ferreira</span>
         </div>
       </a>
 
@@ -58,7 +58,7 @@
       </h1>
 
       <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed mb-8">
-        Explicado em <strong>pílulas rápidas de 2 minutos</strong>, com ilustrações didáticas e sem jargões complicados. Entenda de onde vem a água, para onde vai o esgoto e como proteger a sua cidade.
+        Explicado em <strong>Cards rápidos</strong>, com ilustrações didáticas e sem jargões complicados. Entenda de onde vem a água, para onde vai o esgoto e como proteger a sua cidade.
       </p>
 
       <!-- Cartões Rápidos dos 4 Pilares -->
@@ -112,14 +112,14 @@
       <!-- Barra de Busca -->
       <div class="relative w-full md:w-72">
         <span class="absolute inset-y-0 left-3 flex items-center text-slate-400 text-sm">🔍</span>
-        <input type="text" id="campo-busca" placeholder="Buscar pílula ou conceito..." 
+        <input type="text" id="campo-busca" placeholder="Buscar card ou conceito..." 
                class="w-full pl-9 pr-4 py-2 bg-white border border-slate-200 rounded-xl text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition">
       </div>
     </div>
 
-    <!-- Indicador de Pílulas -->
+    <!-- Indicador de Cards -->
     <div class="flex items-center justify-between mb-6">
-      <h2 class="text-xl font-bold text-slate-900">Pílulas de Aprendizado</h2>
+      <h2 class="text-xl font-bold text-slate-900">Cards de Aprendizado</h2>
       <span id="contador-topicos" class="text-xs font-medium text-slate-500 bg-slate-100 px-2.5 py-1 rounded-md">
         Carregando...
       </span>
@@ -128,6 +128,15 @@
     <!-- Grid de Tópicos -->
     <div id="grid-topicos" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <!-- Injetado via topics.js e app.js -->
+    </div>
+
+    <!-- Botão Carregar Mais -->
+    <div id="area-carregar-mais" class="hidden text-center mt-10">
+      <button id="btn-carregar-mais" onclick="carregarMaisTopicos()"
+              class="px-6 py-3 bg-white border-2 border-emerald-600 text-emerald-700 rounded-xl text-sm font-bold hover:bg-emerald-600 hover:text-white transition-colors shadow-sm">
+        Ver mais cards ↓
+      </button>
+      <p id="info-carregamento" class="text-xs text-slate-400 mt-2"></p>
     </div>
   </main>
 
@@ -154,7 +163,7 @@
     <div class="max-w-4xl mx-auto px-4">
       <p class="font-semibold text-slate-700">jeffersonfe.com.br • Saneamento Básico Descomplicado</p>
       <p class="text-xs text-slate-400 mt-1">
-        Conteúdo educativo aberto para conscientização e cidadania. Hospedado com GitHub Pages.
+        Conteúdo educativo aberto para conscientização e cidadania. Criado com ajuda de IA e Hospedado com GitHub Pages.
       </p>
     </div>
   </footer>
