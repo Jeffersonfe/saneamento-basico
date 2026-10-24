@@ -4,27 +4,27 @@
 const PILARES = {
   geral: {
     nome: "Fundamentos",
-    cor: "bg-emerald-100 text-emerald-800 border-emerald-200",
+    cor: "bg-emerald-100 text-emerald-800 border-emerald-200 dark:bg-emerald-900/50 dark:text-emerald-300 dark:border-emerald-700",
     icone: "🌱"
   },
   agua: {
     nome: "Água Potável",
-    cor: "bg-sky-100 text-sky-800 border-sky-200",
+    cor: "bg-sky-100 text-sky-800 border-sky-200 dark:bg-sky-900/50 dark:text-sky-300 dark:border-sky-700",
     icone: "💧"
   },
   esgoto: {
     nome: "Esgoto Sanitário",
-    cor: "bg-amber-100 text-amber-800 border-amber-200",
+    cor: "bg-amber-100 text-amber-800 border-amber-200 dark:bg-amber-900/50 dark:text-amber-300 dark:border-amber-700",
     icone: "🚽"
   },
   residuos: {
     nome: "Resíduos Sólidos",
-    cor: "bg-lime-100 text-lime-800 border-lime-200",
+    cor: "bg-lime-100 text-lime-800 border-lime-200 dark:bg-lime-900/50 dark:text-lime-300 dark:border-lime-700",
     icone: "♻️"
   },
   drenagem: {
     nome: "Drenagem Urbana",
-    cor: "bg-indigo-100 text-indigo-800 border-indigo-200",
+    cor: "bg-indigo-100 text-indigo-800 border-indigo-200 dark:bg-indigo-900/50 dark:text-indigo-300 dark:border-indigo-700",
     icone: "🌧️"
   }
 };
@@ -1009,6 +1009,478 @@ const TOPICOS = [
     ],
     respostaCorreta: 1,
     explicacao: "A areia possui ação altamente abrasiva nas pás das bombas e tubulações, além de se acumular no fundo dos reatores biológicos reduzindo sua capacidade de tratamento."
+  }
+},
+{
+  id: 10,
+  slug: "drenagem-urbana-controle-de-cheias-introducao",
+  titulo: "Drenagem Urbana: Como a Cidade Controla as Cheias?",
+  subtitulo: "Entenda o caminho da chuva, a diferença entre micro e macrodrenagem e por que o asfalto muda tudo.",
+  pilar: "drenagem",
+  nivel: "Nível 0 • Fundamentos da Drenagem",
+  tempoLeitura: "3 min",
+  dataPublicacao: "24 de Outubro de 2026",
+  resumo: "Para onde vai a água quando chove forte? Descubra como as cidades se organizam para captar o enxurrada das ruas, evitar alagamentos e devolver a água da chuva com segurança para a natureza.",
+  svgIlustracao: `
+    <div class="w-full rounded-xl shadow-sm bg-gradient-to-r from-sky-50 to-blue-50 p-4 sm:p-6 border border-sky-100">
+      <h4 class="text-center font-bold text-sky-800 text-sm sm:text-base mb-4 uppercase tracking-wide">
+        CICLO DA DRENAGEM URBANA: DA CHUVA AO RIO
+      </h4>
+
+      <!-- Grid Responsivo: 1 coluna no celular (grid-cols-1), 5 colunas no Desktop (md:grid-cols-5) -->
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-3 items-stretch">
+        
+        <!-- Passo 1 -->
+        <div class="bg-sky-200/60 border border-sky-500 rounded-lg p-3 flex md:flex-col items-center md:justify-center text-left md:text-center gap-3 md:gap-2 shadow-sm">
+          <div class="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center text-lg shrink-0">🌧️</div>
+          <div>
+            <span class="block text-xs font-bold text-sky-900">1. Precipitação</span>
+            <p class="text-[11px] leading-tight text-sky-800 mt-0.5">A chuva cai sobre áreas rurais e urbanas</p>
+          </div>
+        </div>
+
+        <!-- Passo 2 -->
+        <div class="bg-sky-200/60 border border-sky-500 rounded-lg p-3 flex md:flex-col items-center md:justify-center text-left md:text-center gap-3 md:gap-2 shadow-sm">
+          <div class="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center text-lg shrink-0">🏙️</div>
+          <div>
+            <span class="block text-xs font-bold text-sky-900">2. Escoamento</span>
+            <p class="text-[11px] leading-tight text-sky-800 mt-0.5">Asfalto impede a infiltração da água</p>
+          </div>
+        </div>
+
+        <!-- Passo 3 -->
+        <div class="bg-sky-200/60 border border-sky-500 rounded-lg p-3 flex md:flex-col items-center md:justify-center text-left md:text-center gap-3 md:gap-2 shadow-sm">
+          <div class="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center text-lg shrink-0">🕳️</div>
+          <div>
+            <span class="block text-xs font-bold text-sky-900">3. Microdrenagem</span>
+            <p class="text-[11px] leading-tight text-sky-800 mt-0.5">Bocas de lobo e sarjetas captam o fluxo</p>
+          </div>
+        </div>
+
+        <!-- Passo 4 -->
+        <div class="bg-sky-200/60 border border-sky-500 rounded-lg p-3 flex md:flex-col items-center md:justify-center text-left md:text-center gap-3 md:gap-2 shadow-sm">
+          <div class="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center text-lg shrink-0">🚇</div>
+          <div>
+            <span class="block text-xs font-bold text-sky-900">4. Macrodrenagem</span>
+            <p class="text-[11px] leading-tight text-sky-800 mt-0.5">Galerias, canais e piscinões conduzem a água</p>
+          </div>
+        </div>
+
+        <!-- Passo 5 -->
+        <div class="bg-sky-200/60 border border-sky-500 rounded-lg p-3 flex md:flex-col items-center md:justify-center text-left md:text-center gap-3 md:gap-2 shadow-sm">
+          <div class="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center text-lg shrink-0">🏞️</div>
+          <div>
+            <span class="block text-xs font-bold text-sky-900">5. Lançamento</span>
+            <p class="text-[11px] leading-tight text-sky-800 mt-0.5">Devolução controlada ao rio ou mar</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Legenda de rodapé -->
+      <p class="text-center text-xs font-semibold text-sky-700 mt-4 leading-relaxed">
+        🛡️ <strong>Drenagem Eficiente:</strong> Reduz os riscos de enchentes, enxurradas e erosão, protegendo vidas e a infraestrutura urbana.
+      </p>
+    </div>
+  `,
+  conteudoHtml: `
+    <p class="text-lg leading-relaxed text-slate-700 mb-4">
+      Quando a chuva cai na floresta, a maior parte da água é absorvida pela terra e pelas raízes das árvores. Mas o que acontece quando cobrimos o solo com asfalto, concreto e telhados? A água não consegue mais infiltrar e precisa escorrer rapidamente pela superfície. A essa infraestrutura invisível que guia a chuva e protege a cidade contra alagamentos damos o nome de <strong>Sistema de Drenagem Urbana</strong>.
+    </p>
+
+    <h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">Como a água da chuva viaja pela cidade:</h3>
+    
+    <ol class="space-y-4 my-4 list-decimal list-inside text-slate-700 leading-relaxed">
+      <li>
+        <strong>Impermeabilização do Solo:</strong> Calçadas, ruas e construções impedem a absorção natural. A água da chuva acumula-se rapidamente na superfície, formando o chamado enxurrada.
+      </li>
+      <li>
+        <strong>Microdrenagem (A Primeira Linha de Defesa):</strong> É o sistema local responsável por tirar a água do nível da rua. Inclui as <strong>sarjetas</strong> (que guiam a água pela lateral da via), as <strong>bocas de lobo</strong> (bueiros que engolem a enxurrada) e tubulações menores sob a calçada.
+      </li>
+      <li>
+        <strong>Macrodrenagem (Os Grandes Caminhos):</strong> Quando o volume de várias ruas se junta, a água entra na rede de macrodrenagem. Ela é formada por grandes galerias subterrâneas, canais abertos, piscinões de retenção e diques.
+      </li>
+      <li>
+        <strong>Reservatórios de Amortecimento (Piscinões):</strong> Em tempestades extremas, o volume de água pode superar a capacidade dos rios. Os piscinões acumulam temporariamente esse excesso e o liberam aos poucos, evitando enchentes nos bairros vizinhos.
+      </li>
+      <li>
+        <strong>Corpo Receptor:</strong> O destino final de toda a água de chuva drenada é o curso d'água natural da região — como rios, lagos ou o oceano.
+      </li>
+    </ol>
+
+    <div class="bg-sky-50 border-l-4 border-sky-500 p-4 my-6 rounded-r-lg">
+      <h4 class="font-bold text-sky-900 flex items-center gap-2">
+        <span>💡</span> Lixo na rua: o inimigo nº 1 do combate às cheias
+      </h4>
+      <p class="text-sm text-sky-800 mt-1">
+        Garrafas plásticas, sacolas e entulho jogados na rua são arrastados pela chuva direto para as bocas de lobo. Quando essas entradas entopem, a água não consegue entrar no sistema subterrâneo, provocando alagamentos em poucos minutos mesmo em chuvas moderadas.
+      </p>
+    </div>
+  `,
+  quiz: {
+    pergunta: "Qual é o papel principal da microdrenagem (como bocas de lobo e sarjetas) na cidade?",
+    opcoes: [
+      "Tratar o esgoto vindo das residências antes de chegar aos rios",
+      "Captar a água da chuva no nível da rua e direcioná-la às galerias subterrâneas",
+      "Filtrar a água da chuva para torná-la própria para consumo humano",
+      "Armazenar a água da chuva por longos períodos para uso na agricultura"
+    ],
+    respostaCorreta: 1,
+    explicacao: "A microdrenagem atua na captação inicial da enxurrada nas ruas e calçadas, direcionando a água de forma rápida e segura para os canais e galerias maiores (macrodrenagem)."
+  }
+},
+{
+  id: 11,
+  slug: "drenagem-urbana-de-quem-e-a-responsabilidade",
+  titulo: "Quem Cuida da Drenagem? De Quem é a Responsabilidade?",
+  subtitulo: "Entenda o papel da Prefeitura, do Governo, das Agências Reguladoras e da própria população no combate às cheias.",
+  pilar: "drenagem",
+  nivel: "Nível 1 • Governança e Gestão Urbana",
+  tempoLeitura: "3 min",
+  dataPublicacao: "24 de Outubro de 2026",
+  resumo: "Geralmente lembramos da drenagem apenas nas tempestades, mas quem deve limpar as bocas de lobo e construir os piscinões? Descubra como a Constituição e o Marco Legal do Saneamento dividem os papéis da gestão da água da chuva.",
+  svgIlustracao: `
+    <div class="w-full rounded-xl shadow-sm bg-gradient-to-r from-sky-50 to-blue-50 p-4 sm:p-6 border border-sky-100">
+      <h4 class="text-center font-bold text-sky-800 text-sm sm:text-base mb-4 uppercase tracking-wide">
+        A CADEIA DE RESPONSABILIDADE DA DRENAGEM
+      </h4>
+
+      <!-- Grid Responsivo: 1 coluna no celular (grid-cols-1), 5 colunas no Desktop (md:grid-cols-5) -->
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-3 items-stretch">
+        
+        <!-- Ator 1 -->
+        <div class="bg-sky-200/60 border border-sky-500 rounded-lg p-3 flex md:flex-col items-center md:justify-center text-left md:text-center gap-3 md:gap-2 shadow-sm">
+          <div class="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center text-lg shrink-0">🏛️</div>
+          <div>
+            <span class="block text-xs font-bold text-sky-900">1. Prefeitura (Titular)</span>
+            <p class="text-[11px] leading-tight text-sky-800 mt-0.5">Planeja, faz leis e define o Plano Diretor de Drenagem</p>
+          </div>
+        </div>
+
+        <!-- Ator 2 -->
+        <div class="bg-sky-200/60 border border-sky-500 rounded-lg p-3 flex md:flex-col items-center md:justify-center text-left md:text-center gap-3 md:gap-2 shadow-sm">
+          <div class="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center text-lg shrink-0">🚜</div>
+          <div>
+            <span class="block text-xs font-bold text-sky-900">2. Execução / Concessionária</span>
+            <p class="text-[11px] leading-tight text-sky-800 mt-0.5">Limpa bueiros, desassoreia rios e constrói piscinões</p>
+          </div>
+        </div>
+
+        <!-- Ator 3 -->
+        <div class="bg-sky-200/60 border border-sky-500 rounded-lg p-3 flex md:flex-col items-center md:justify-center text-left md:text-center gap-3 md:gap-2 shadow-sm">
+          <div class="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center text-lg shrink-0">⚖️</div>
+          <div>
+            <span class="block text-xs font-bold text-sky-900">3. Regulação (ANA / ARES)</span>
+            <p class="text-[11px] leading-tight text-sky-800 mt-0.5">Fiscaliza a qualidade do serviço e impõe metas</p>
+          </div>
+        </div>
+
+        <!-- Ator 4 -->
+        <div class="bg-sky-200/60 border border-sky-500 rounded-lg p-3 flex md:flex-col items-center md:justify-center text-left md:text-center gap-3 md:gap-2 shadow-sm">
+          <div class="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center text-lg shrink-0">🤝</div>
+          <div>
+            <span class="block text-xs font-bold text-sky-900">4. Governo Estadual/Federal</span>
+            <p class="text-[11px] leading-tight text-sky-800 mt-0.5">Financia obras regionais de macrodrenagem em grandes bacias</p>
+          </div>
+        </div>
+
+        <!-- Ator 5 -->
+        <div class="bg-sky-200/60 border border-sky-500 rounded-lg p-3 flex md:flex-col items-center md:justify-center text-left md:text-center gap-3 md:gap-2 shadow-sm">
+          <div class="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center text-lg shrink-0">🏠</div>
+          <div>
+            <span class="block text-xs font-bold text-sky-900">5. Cidadão</span>
+            <p class="text-[11px] leading-tight text-sky-800 mt-0.5">Descarta lixo no local correto e preserva o solo permeável</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Legenda de rodapé -->
+      <p class="text-center text-xs font-semibold text-sky-700 mt-4 leading-relaxed">
+        📜 <strong>Marco Legal do Saneamento:</strong> A drenagem urbana é um dos 4 pilares obrigatórios do saneamento básico no Brasil, ao lado da água, do esgoto e do lixo.
+      </p>
+    </div>
+  `,
+  conteudoHtml: `
+    <p class="text-lg leading-relaxed text-slate-700 mb-4">
+      Quando uma rua alaga durante uma tempestade, surge a pergunta de um milhão de reais: <strong>afinal, de quem é a culpa e a obrigação de resolver?</strong> De acordo com a Constituição Federal e o Marco Legal do Saneamento Básico (Lei nº 11.445/2007), a drenagem urbana é considerada um serviço público essencial, e seus papéis são divididos de forma bem clara entre os entes públicos e a sociedade.
+    </p>
+
+    <h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">Como se dividem as responsabilidades:</h3>
+    
+    <ol class="space-y-4 my-4 list-decimal list-inside text-slate-700 leading-relaxed">
+      <li>
+        <strong>Prefeitura Municipal (Titular do Serviço):</strong> É o principal responsável. Cabe ao município criar o <em>Plano Diretor de Drenagem Urbana</em>, fiscalizar construções irregulares em áreas de risco e garantir a limpeza periódica do sistema.
+      </li>
+      <li>
+        <strong>Secretaria de Obras ou Concessionária (Executora):</strong> A prefeitura pode realizar o serviço diretamente (por meio das suas secretarias) ou concedê-lo a uma autarquia ou empresa privada/PPP. Quem executa deve fazer a varrição das vias, desobstrução de bocas de lobo, dragagem de rios e manutenção de piscinões.
+      </li>
+      <li>
+        <strong>Agências Reguladoras (Regulação e Fiscalização):</strong> A Agência Nacional de Águas e Saneamento Básico (ANA) estabelece normas de referência nacionais, enquanto agências estaduais ou municipais fiscalizam se a prefeitura ou concessionária está cumprindo as metas de prevenção de enchentes.
+      </li>
+      <li>
+        <strong>Governo do Estado e Governo Federal (Apoio Financeiro e Regional):</strong> Como rios atravessam vários municípios, obras gigantescas de macrodrenagem (como a canalização de grandes rios ou contenção de encostas) frequentemente dependem de recursos estaduais ou federais.
+      </li>
+      <li>
+        <strong>População (Responsabilidade Compartilhada):</strong> Nenhuma infraestrutura aguenta o acúmulo de lixo. O cidadão tem o dever de descarte correto dos resíduos sólidos e de manter porcentagens de área verde permeável em seu lote de acordo com o Código de Obras local.
+      </li>
+    </ol>
+
+    <div class="bg-sky-50 border-l-4 border-sky-500 p-4 my-6 rounded-r-lg">
+      <h4 class="font-bold text-sky-900 flex items-center gap-2">
+        <span>💡</span> Drenagem não é de graça! De onde vem o dinheiro?
+      </h4>
+      <p class="text-sm text-sky-800 mt-1">
+        Ao contrário da água e do esgoto, que são cobrados diretamente na conta mensal, a drenagem tradicionalmente é custeada pelos impostos gerais do município (como o IPTU). Contudo, o Marco Legal autoriza a criação de taxas ou tarifas específicas de manejo de águas pluviais para garantir fundos permanentes para obras de prevenção.
+      </p>
+    </div>
+  `,
+  quiz: {
+    pergunta: "Segundo a legislação brasileira, quem é o TITULAR original responsável por garantir os serviços de drenagem e manejo de águas pluviais na cidade?",
+    opcoes: [
+      "A Agência Nacional de Águas (ANA)",
+      "O Município (Prefeitura Municipal)",
+      "O Governo Federal exclusivamente",
+      "As empresas privadas de construção civil"
+    ],
+    respostaCorreta: 1,
+    explicacao: "A Constituição e o Marco Legal do Saneamento definem que a titularidade dos serviços públicos de saneamento básico (incluindo a drenagem) pertence aos municípios."
+  }
+},
+{
+  id: 12,
+  slug: "hierarquia-do-lixo-os-5-rs",
+  titulo: "Hierarquia do Lixo: A Regra dos 5 R's",
+  subtitulo: "Antes de reciclar, o segredo é não gerar. Entenda a ordem de prioridades para diminuir o lixo nas cidades.",
+  pilar: "residuos",
+  nivel: "Nível 0 • Fundamentos dos Resíduos",
+  tempoLeitura: "3 min",
+  dataPublicacao: "24 de Outubro de 2026",
+  resumo: "Reciclar é ótimo, mas é apenas a última etapa do consumo consciente! Descubra como a pirâmide dos 5 R's ensina a atacar o problema na fonte e evitar o colapso dos aterros sanitários.",
+  svgIlustracao: `
+    <div class="w-full rounded-xl shadow-sm bg-gradient-to-r from-amber-50 to-orange-50 p-4 sm:p-6 border border-amber-100">
+      <h4 class="text-center font-bold text-amber-800 text-sm sm:text-base mb-4 uppercase tracking-wide">
+        ORDEM DE PRIORIDADE: A PIRÂMIDE DOS 5 R'S
+      </h4>
+
+      <!-- Grid Responsivo: 1 coluna no celular (grid-cols-1), 5 colunas no Desktop (md:grid-cols-5) -->
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-3 items-stretch">
+        
+        <!-- Passo 1 -->
+        <div class="bg-amber-200/60 border border-amber-500 rounded-lg p-3 flex md:flex-col items-center md:justify-center text-left md:text-center gap-3 md:gap-2 shadow-sm">
+          <div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-lg shrink-0">💭</div>
+          <div>
+            <span class="block text-xs font-bold text-amber-900">1. Repensar</span>
+            <p class="text-[11px] leading-tight text-amber-800 mt-0.5">Questionar hábitos e real necessidade de compra</p>
+          </div>
+        </div>
+
+        <!-- Passo 2 -->
+        <div class="bg-amber-200/60 border border-amber-500 rounded-lg p-3 flex md:flex-col items-center md:justify-center text-left md:text-center gap-3 md:gap-2 shadow-sm">
+          <div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-lg shrink-0">🚫</div>
+          <div>
+            <span class="block text-xs font-bold text-amber-900">2. Recusar</span>
+            <p class="text-[11px] leading-tight text-amber-800 mt-0.5">Dizer não a descartáveis e embalagens ecessivas</p>
+          </div>
+        </div>
+
+        <!-- Passo 3 -->
+        <div class="bg-amber-200/60 border border-amber-500 rounded-lg p-3 flex md:flex-col items-center md:justify-center text-left md:text-center gap-3 md:gap-2 shadow-sm">
+          <div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-lg shrink-0">📉</div>
+          <div>
+            <span class="block text-xs font-bold text-amber-900">3. Reduzir</span>
+            <p class="text-[11px] leading-tight text-amber-800 mt-0.5">Diminuir a quantidade e o volume de consumo</p>
+          </div>
+        </div>
+
+        <!-- Passo 4 -->
+        <div class="bg-amber-200/60 border border-amber-500 rounded-lg p-3 flex md:flex-col items-center md:justify-center text-left md:text-center gap-3 md:gap-2 shadow-sm">
+          <div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-lg shrink-0">🔄</div>
+          <div>
+            <span class="block text-xs font-bold text-amber-900">4. Reutilizar</span>
+            <p class="text-[11px] leading-tight text-amber-800 mt-0.5">Dar nova utilidade antes de descartar o objeto</p>
+          </div>
+        </div>
+
+        <!-- Passo 5 -->
+        <div class="bg-amber-200/60 border border-amber-500 rounded-lg p-3 flex md:flex-col items-center md:justify-center text-left md:text-center gap-3 md:gap-2 shadow-sm">
+          <div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-lg shrink-0">♻️</div>
+          <div>
+            <span class="block text-xs font-bold text-amber-900">5. Reciclar</span>
+            <p class="text-[11px] leading-tight text-amber-800 mt-0.5">Transformar a matéria-prima em um novo item</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Legenda de rodapé -->
+      <p class="text-center text-xs font-semibold text-amber-700 mt-4 leading-relaxed">
+        🌱 <strong>Consumo Consciente:</strong> A reciclagem consome água e energia. A melhor solução sempre será evitar a criação do resíduo na origem.
+      </p>
+    </div>
+  `,
+  conteudoHtml: `
+    <p class="text-lg leading-relaxed text-slate-700 mb-4">
+      Muita gente acredita que separar o lixo para a reciclagem resolve o problema ambiental da cidade. No entanto, a reciclagem consome energia, água e gera emissões no transporte. Por isso, a <strong>Política Nacional de Resíduos Sólidos (PNRS)</strong> adota a regra dos 5 R's como uma pirâmide de prioridades: o melhor resíduo é aquele que nunca foi produzido.
+    </p>
+
+    <h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">Conheça a sequência de decisão dos 5 R's:</h3>
+    
+    <ol class="space-y-4 my-4 list-decimal list-inside text-slate-700 leading-relaxed">
+      <li>
+        <strong>Repensar:</strong> Questionar a necessidade real de um produto antes da compra. "Eu realmente preciso disso ou estou comprando por impulso?"
+      </li>
+      <li>
+        <strong>Recusar:</strong> Não aceitar itens descartáveis de uso único (como canudos, sacolas plásticas, copos de café e panfletos) e produtos de empresas sem responsabilidade ambiental.
+      </li>
+      <li>
+        <strong>Reduzir:</strong> Diminuir a quantidade de resíduos gerados no dia a dia. Dar preferência a produtos com menos embalagens, comprar a granel ou optar por itens duráveis.
+      </li>
+      <li>
+        <strong>Reutilizar:</strong> Ampliar a vida útil de embalagens e objetos sem passar por processos industriais. Usar potes de vidro para guardar alimentos, consertar eletrônicos ou doar roupas.
+      </li>
+      <li>
+        <strong>Reciclar:</strong> É a última cartada. Quando o resíduo não pode ser reaproveitado, ele é enviado à indústria para voltar ao estado de matéria-prima e virar um novo produto.
+      </li>
+    </ol>
+
+    <div class="bg-amber-50 border-l-4 border-amber-500 p-4 my-6 rounded-r-lg">
+      <h4 class="font-bold text-amber-900 flex items-center gap-2">
+        <span>💡</span> E o que sobra quando o R5 (Reciclar) não é possível?
+      </h4>
+      <p class="text-sm text-amber-800 mt-1">
+        O material que não pode ser reaproveitado nem reciclado (como fraldas descartáveis, papel higiênico e fitas adesivas) é chamado de <strong>rejeito</strong>. Esse é o único tipo de lixo que deve ter como destino final os aterros sanitários.
+      </p>
+    </div>
+  `,
+  quiz: {
+    pergunta: "Dentro da hierarquia dos 5 R's da gestão de resíduos, qual destas atitudes deve ser a PRIMEIRA prioridade?",
+    opcoes: [
+      "Enviar todos os resíduos recicláveis para a coleta seletiva",
+      "Evitar a geração de lixo repensando hábitos e recusando descartáveis",
+      "Reaproveitar potes plásticos para guardar comida na geladeira",
+      "Compostar o lixo orgânico na horta comunitária do bairro"
+    ],
+    respostaCorreta: 1,
+    explicacao: "Evitar a produção do resíduo (Repensar, Recusar e Reduzir) é a estratégia mais eficiente e sustentável, pois elimina os custos ambientais de transporte, tratamento e descarte."
+  }
+},
+{
+  id: 13,
+  slug: "drenagem-lixo-e-obstrucao-de-bueiros",
+  titulo: "Lixo na Rua e Bocas de Lobo: Por Que a Cidade Alaga Tão Rápido?",
+  subtitulo: "Entenda como o descarte inadequado de resíduos anula a capacidade de escoamento da chuva em poucos minutos.",
+  pilar: "drenagem",
+  nivel: "Nível 0 • Impacto no Cotidiano",
+  tempoLeitura: "3 min",
+  dataPublicacao: "24 de Outubro de 2026",
+  resumo: "Uma única garrafa PET ou sacola plástica pode parecer inofensiva, mas quando arrastada pela enxurrada, transforma bueiros em tampões. Descubra o efeito dominó que causa as enchentes relâmpago nas cidades.",
+  svgIlustracao: `
+    <div class="w-full rounded-xl shadow-sm bg-gradient-to-r from-sky-50 to-blue-50 p-4 sm:p-6 border border-sky-100">
+      <h4 class="text-center font-bold text-sky-800 text-sm sm:text-base mb-4 uppercase tracking-wide">
+        O EFEITO DOMINÓ DO LIXO NA DRENAGEM
+      </h4>
+
+      <!-- Grid Responsivo: 1 coluna no celular (grid-cols-1), 5 colunas no Desktop (md:grid-cols-5) -->
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-3 items-stretch">
+        
+        <!-- Passo 1 -->
+        <div class="bg-sky-200/60 border border-sky-500 rounded-lg p-3 flex md:flex-col items-center md:justify-center text-left md:text-center gap-3 md:gap-2 shadow-sm">
+          <div class="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center text-lg shrink-0">🗑️</div>
+          <div>
+            <span class="block text-xs font-bold text-sky-900">1. Descarte Incorreto</span>
+            <p class="text-[11px] leading-tight text-sky-800 mt-0.5">Lixo, entulho e folhas deixados nas calçadas e vias</p>
+          </div>
+        </div>
+
+        <!-- Passo 2 -->
+        <div class="bg-sky-200/60 border border-sky-500 rounded-lg p-3 flex md:flex-col items-center md:justify-center text-left md:text-center gap-3 md:gap-2 shadow-sm">
+          <div class="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center text-lg shrink-0">🌊</div>
+          <div>
+            <span class="block text-xs font-bold text-sky-900">2. Arrasto Pluvial</span>
+            <p class="text-[11px] leading-tight text-sky-800 mt-0.5">A enxurrada lava as ruas e empurra os resíduos</p>
+          </div>
+        </div>
+
+        <!-- Passo 3 -->
+        <div class="bg-sky-200/60 border border-sky-500 rounded-lg p-3 flex md:flex-col items-center md:justify-center text-left md:text-center gap-3 md:gap-2 shadow-sm">
+          <div class="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center text-lg shrink-0">🚫</div>
+          <div>
+            <span class="block text-xs font-bold text-sky-900">3. Obstrução da Grelha</span>
+            <p class="text-[11px] leading-tight text-sky-800 mt-0.5">Bocas de lobo ficam tampadas pelo acúmulo de lixo</p>
+          </div>
+        </div>
+
+        <!-- Passo 4 -->
+        <div class="bg-sky-200/60 border border-sky-500 rounded-lg p-3 flex md:flex-col items-center md:justify-center text-left md:text-center gap-3 md:gap-2 shadow-sm">
+          <div class="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center text-lg shrink-0">⚠️</div>
+          <div>
+            <span class="block text-xs font-bold text-sky-900">4. Represamento</span>
+            <p class="text-[11px] leading-tight text-sky-800 mt-0.5">A água não entra na galeria e acumula na pista</p>
+          </div>
+        </div>
+
+        <!-- Passo 5 -->
+        <div class="bg-sky-200/60 border border-sky-500 rounded-lg p-3 flex md:flex-col items-center md:justify-center text-left md:text-center gap-3 md:gap-2 shadow-sm">
+          <div class="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center text-lg shrink-0">🚗</div>
+          <div>
+            <span class="block text-xs font-bold text-sky-900">5. Alagamento</span>
+            <p class="text-[11px] leading-tight text-sky-800 mt-0.5">Submersão de vias, invasão de imóveis e trânsito retido</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Legenda de rodapé -->
+      <p class="text-center text-xs font-semibold text-sky-700 mt-4 leading-relaxed">
+        🧹 <strong>Limpeza & Cidadania:</strong> Manter a varrição em dia e descartar o lixo no horário da coleta evita que tempestades comuns virem desastres urbanos.
+      </p>
+    </div>
+  `,
+  conteudoHtml: `
+    <p class="text-lg leading-relaxed text-slate-700 mb-4">
+      Você já reparou como alguns pontos da cidade alagam em questão de 10 ou 15 minutos de chuva forte? Na maioria das vezes, a causa não é o tamanho das galerias subterrâneas, mas sim a <strong>impossibilidade da água entrar no sistema</strong>. As bocas de lobo (bueiros) funcionam como as portas de entrada da drenagem urbana, e o lixo jogado nas ruas atua como uma verdadeira tranca nessas portas.
+    </p>
+
+    <h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">Como o lixo bloqueia a drenagem passo a passo:</h3>
+    
+    <ol class="space-y-4 my-4 list-decimal list-inside text-slate-700 leading-relaxed">
+      <li>
+        <strong>Acúmulo na Superfície:</strong> Sacolas de lixo colocadas na calçada fora do horário da coleta, garrafas descartadas na rua, restos de poda e entulho de obra ficam expostos na sarjeta.
+      </li>
+      <li>
+        <strong>Efeito "Varredura" da Enxurrada:</strong> Quando a chuva cai, o fluxo de água que escorre pelo asfalto ganha velocidade e arrasta tudo o que encontra pelo caminho em direção ao ponto mais baixo da rua.
+      </li>
+      <li>
+        <strong>Gargalo nas Grelhas:</strong> Ao chegar à boca de lobo, os resíduos maiores (como plásticos, papelões e galhos) ficam presos nas grades. Esse material cria um "efeito rede", retendo também folhas e areia até vedar completamente a passagem.
+      </li>
+      <li>
+        <strong>Subpressão e Represamento:</strong> Com as entradas bloqueadas, a água que continua descendo da parte alta do bairro não tem para onde ir. Ela acumula na superfície, cobrindo o meio-fio e avançando sobre calçadas e comércios.
+      </li>
+      <li>
+        <strong>Risco à Saúde Pública:</strong> Além do prejuízo material, a água acumulada mistura-se com a sujeira das ruas e eventuais extravazamentos de esgoto, aumentando o risco de contaminação por doenças como a leptospirose.
+      </li>
+    </ol>
+
+    <div class="bg-sky-50 border-l-4 border-sky-500 p-4 my-6 rounded-r-lg">
+      <h4 class="font-bold text-sky-900 flex items-center gap-2">
+        <span>💡</span> Poda de árvores e restos de obra: os vilões invisíveis
+      </h4>
+      <p class="text-sm text-sky-800 mt-1">
+        Não é só o lixo doméstico que entope bueiros. Areia de construção estocada na calçada sem proteção é lavada para dentro das galerias, formando bancos de areia subterrâneos que reduzem drasticamente o espaço do canal (processo chamado de assoreamento).
+      </p>
+    </div>
+  `,
+  quiz: {
+    pergunta: "Por que o acúmulo de lixo nas sarjetas faz com que a cidade alague tão rapidamente durante uma tempestade?",
+    opcoes: [
+      "Porque o lixo reage com a água da chuva aumentando o volume total do líquido",
+      "Porque os resíduos bloqueiam as grelhas das bocas de lobo, impedindo que a água entre no sistema subterrâneo",
+      "Porque o lixo absorve toda a água e impede que ela infiltre naturalmente no solo",
+      "Porque os resíduos corroem o asfalto e destroem a estrutura das tubulações em segundos"
+    ],
+    respostaCorreta: 1,
+    explicacao: "A água da chuva escorre pelas sarjetas em direção aos bueiros. Quando há lixo na rua, a enxurrada o carrega até a grelha, criando uma barreira física que impede a entrada da água na rede subterrânea."
   }
 }
   

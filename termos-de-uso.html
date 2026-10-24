@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Termos de Uso | Saneamento Básico Descomplicado</title>
+  <meta name="description" content="Termos de Uso do portal Saneamento Básico Descomplicado. Conteúdo educativo aberto, parte produzida com apoio de inteligência artificial.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💧</text></svg>">
+
+  <!-- Tailwind CSS & Google Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: "class" };
+  </script>
+  <script>
+    // Aplica o tema salvo antes da renderização (evita "flash" de tema errado)
+    (function () {
+      var tema = localStorage.getItem("tema");
+      if (tema === "escuro" || (!tema && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+        document.documentElement.classList.add("dark");
+      }
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-200 antialiased selection:bg-emerald-500 selection:text-white">
+
+  <!-- Header de Navegação -->
+  <header class="sticky top-0 z-30 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-700/80">
+    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2.5 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-400 flex items-center justify-center text-white shadow-sm shadow-emerald-500/20 group-hover:scale-105 transition-transform">
+          <span class="text-xl">💧</span>
+        </div>
+        <div>
+          <span class="font-bold text-slate-900 dark:text-white tracking-tight text-base group-hover:text-emerald-700 dark:group-hover:text-emerald-400 transition">Saneamento Descomplicado</span>
+          <span class="block text-[11px] font-medium text-slate-400 dark:text-slate-500">por Jefferson Ferreira</span>
+        </div>
+      </a>
+
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="hidden sm:inline text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition">
+          ← Voltar para os Cards
+        </a>
+        <button id="btn-tema" onclick="alternarTema()" title="Alternar tema"
+                aria-label="Alternar entre modo claro e modo escuro"
+                class="w-9 h-9 shrink-0 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-700 text-base hover:bg-slate-100 dark:hover:bg-slate-600 transition flex items-center justify-center">
+          🌙
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Conteúdo dos Termos -->
+  <main class="max-w-3xl mx-auto px-4 py-12">
+    <div class="mb-8">
+      <span class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-xs font-medium text-slate-600 dark:text-slate-300 shadow-sm mb-4">
+        📄 Documento oficial
+      </span>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-3">Termos de Uso</h1>
+      <p class="text-sm text-slate-500 dark:text-slate-400">Última atualização: 24 de outubro de 2026</p>
+    </div>
+
+    <div class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm p-6 sm:p-8 space-y-8 text-slate-700 dark:text-slate-300 leading-relaxed">
+
+      <!-- Aviso em destaque -->
+      <div class="bg-amber-50 dark:bg-amber-900/30 border border-amber-200 dark:border-amber-700 rounded-xl p-4 flex gap-3">
+        <span class="text-xl shrink-0">⚠️</span>
+        <p class="text-sm text-amber-900 dark:text-amber-200">
+          <strong>Importante:</strong> este site tem finalidade exclusivamente <strong>educativa e informativa</strong>. O conteúdo aqui apresentado <strong>não substitui</strong> laudos técnicos, projetos profissionais, normas oficiais (como as da ABNT e do Ministério das Cidades) nem a consulta a engenheiros, sanitaristas ou profissionais habilitados.
+        </p>
+      </div>
+
+      <!-- 1. Objeto -->
+      <section>
+        <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-2">1. Objeto do Site</h2>
+        <p>
+          O portal <strong>Saneamento Básico Descomplicado</strong> é um projeto educativo, de acesso aberto e gratuito, que traduz temas de saneamento básico — água potável, esgotamento sanitário, resíduos sólidos e drenagem — em linguagem simples, com o objetivo de promover conscientização ambiental e cidadania.
+        </p>
+      </section>
+
+      <!-- 2. Conteúdo Educacional -->
+      <section>
+        <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-2">2. Natureza do Conteúdo</h2>
+        <p>
+          Todo o material publicado (cards, ilustrações, textos e quizzes) tem caráter <strong>didático e introdutório</strong>. É destinado a estudantes, professores e ao público geral que deseja compreender os conceitos básicos de saneamento.
+        </p>
+        <ul class="list-disc list-inside mt-2 space-y-1 text-slate-600 dark:text-slate-400">
+          <li>O conteúdo <strong>não constitui</strong> consultoria técnica, laudo, parecer ou projeto de engenharia;</li>
+          <li>Não devem ser usados para tomada de decisões sobre obras, tratamento de água ou manejo de resíduos sem acompanhamento profissional;</li>
+          <li>Podem haver imprecisões, simplificações ou atualizações pendentes, uma vez que o acervo é revisado de forma contínua.</li>
+        </ul>
+      </section>
+
+      <!-- 3. Uso de IA -->
+      <section>
+        <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-2">3. Uso de Inteligência Artificial</h2>
+        <p>
+          Em transparência com nossos leitores: <strong>parte do conteúdo deste site foi produzida com o apoio de ferramentas de inteligência artificial (IA)</strong>, incluindo textos, revisões e ilustrações.
+        </p>
+        <ul class="list-disc list-inside mt-2 space-y-1 text-slate-600 dark:text-slate-400">
+          <li>O material gerado com apoio de IA passa por <strong>revisão humana</strong> antes da publicação;</li>
+          <li>Ainda assim, conteúdos gerados por IA podem conter <strong>erros, omissões ou imprecisões</strong>;</li>
+          <li>Em caso de divergência com normas técnicas oficiais ou fontes científicas, <strong>prevalecem sempre as fontes primárias e as normas vigentes</strong>;</li>
+          <li>Identificou um erro ou tem sugestão de melhoria? Fique à vontade para abrir uma issue no repositório do projeto ou entrar em contato pelo site <a href="https://jeffersonfe.com.br" target="_blank" rel="noopener" class="text-emerald-700 dark:text-emerald-400 font-semibold hover:underline">jeffersonfe.com.br</a>.</li>
+        </ul>
+      </section>
+
+      <!-- 4. Propriedade Intelectual -->
+      <section>
+        <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-2">4. Propriedade Intelectual e Compartilhamento</h2>
+        <p>
+          O portal é de autoria de <strong>Jefferson Ferreira</strong> e é hospedado publicamente. Você pode:
+        </p>
+        <ul class="list-disc list-inside mt-2 space-y-1 text-slate-600 dark:text-slate-400">
+          <li><strong>Compartilhar</strong> livremente os cards e o link do site para fins educacionais;</li>
+          <li><strong>Citar</strong> trechos, desde que com atribuição clara ao autor e ao site;</li>
+          <li>Usar o material em <strong>sala de aula</strong> e materiais pedagógicos, sem fins comerciais.</li>
+        </ul>
+        <p class="mt-2">
+          É vedada a <strong>reprodução integral com fins comerciais</strong> ou a apropriação do material como se fosse obra própria, sem autorização prévia do autor.
+        </p>
+      </section>
+
+      <!-- 5. Uso do Site -->
+      <section>
+        <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-2">5. Compromisso do Usuário</h2>
+        <p>Ao utilizar este site, você concorda em:</p>
+        <ul class="list-disc list-inside mt-2 space-y-1 text-slate-600 dark:text-slate-400">
+          <li>Utilizar o conteúdo de forma ética e educativa;</li>
+          <li>Não utilizar o site para fins ilícitos ou que violem direitos de terceiros;</li>
+          <li>Não interferir no funcionamento do site ou tentar acessar áreas restritas de infraestrutura.</li>
+        </ul>
+      </section>
+
+      <!-- 6. Links Externos -->
+      <section>
+        <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-2">6. Links e Conteúdos de Terceiros</h2>
+        <p>
+          O site pode conter links para páginas externas (como fontes oficiais, vídeos ou artigos de referência). Esses conteúdos são de responsabilidade de seus respectivos autores, e o acesso a eles se dá por conta e risco do usuário.
+        </p>
+      </section>
+
+      <!-- 7. Privacidade -->
+      <section>
+        <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-2">7. Privacidade e Dados</h2>
+        <p>
+          Este site <strong>não coleta dados pessoais</strong>, não possui cadastro de usuários e não utiliza cookies de rastreamento. A busca, os filtros e a escolha do tema (claro/escuro) funcionam localmente no seu navegador (no seu dispositivo), sem enviar informações a servidores.
+        </p>
+      </section>
+
+      <!-- 8. Isenção de Garantias -->
+      <section>
+        <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-2">8. Isenção de Garantias e Responsabilidades</h2>
+        <p>
+          O conteúdo é oferecido <strong>"no estado em que se encontra" (as is)</strong>, sem garantias de qualquer tipo, expressas ou implícitas. O autor <strong>não se responsabiliza</strong> por:
+        </p>
+        <ul class="list-disc list-inside mt-2 space-y-1 text-slate-600 dark:text-slate-400">
+          <li>Decisões tomadas com base exclusivamente no conteúdo aqui apresentado;</li>
+          <li>Danos diretos ou indiretos decorrentes do uso do site;</li>
+          <li>Indisponibilidade temporária do site, uma vez que é hospedado gratuitamente em serviços de terceiros (GitHub Pages).</li>
+        </ul>
+      </section>
+
+      <!-- 9. Alterações -->
+      <section>
+        <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-2">9. Alterações nos Termos</h2>
+        <p>
+          Estes termos podem ser atualizados a qualquer momento para refletir mudanças no projeto ou na legislação aplicável. A data da última atualização estará sempre indicada no topo desta página. O uso continuado do site após alterações implica aceitação dos novos termos.
+        </p>
+      </section>
+
+      <!-- 10. Lei Aplicável -->
+      <section>
+        <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-2">10. Lei Aplicável</h2>
+        <p>
+          Estes termos são regidos pelas leis da <strong>República Federativa do Brasil</strong>, em especial o Código de Defesa do Consumidor (Lei nº 8.078/90) e a Lei Geral de Proteção de Dados (Lei nº 13.709/2018), independentemente de onde o usuário acesse o site.
+        </p>
+      </section>
+
+      <!-- Contato -->
+      <div class="bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700 rounded-xl p-4">
+        <h2 class="font-bold text-slate-900 dark:text-white mb-1">💬 Dúvidas ou sugestões?</h2>
+        <p class="text-sm text-slate-600 dark:text-slate-400">
+          Este é um projeto de código aberto. Você pode contribuir, reportar erros ou enviar sugestões pelo repositório no GitHub ou pelo site <a href="https://jeffersonfe.com.br" target="_blank" rel="noopener" class="text-emerald-700 dark:text-emerald-400 font-semibold hover:underline">jeffersonfe.com.br</a>.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-8">
+      <a href="index.html" class="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-600 text-white rounded-xl font-bold text-sm hover:bg-emerald-700 transition shadow-sm">
+        💧 Voltar para os Cards
+      </a>
+    </div>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700 mt-20 py-8 text-center text-sm text-slate-500 dark:text-slate-400">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="font-semibold text-slate-700 dark:text-slate-200">jeffersonfe.com.br • Saneamento Básico Descomplicado</p>
+      <p class="text-xs text-slate-400 dark:text-slate-500 mt-1">
+        Conteúdo educativo aberto para conscientização e cidadania. Criado com ajuda de IA e Hospedado com GitHub Pages.
+      </p>
+      <p class="mt-3 text-xs">
+        <a href="termos-de-uso.html" class="font-semibold text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition">Termos de Uso</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/tema.js"></script>
+</body>
+</html>
